@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width" />
         <title>Nubia Brice</title>
         <link rel="stylesheet" type="text/css" href="./portfolio.css">
+        <link rel="shortcut icon" type="img/jpg" href="images_videos/coding_icon.png">
     </head>
 
     <!--Body-->
@@ -14,9 +15,11 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!--onclick and ondbclick func added to op/cls contact form-->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
         <!--Breaks-->
@@ -49,6 +52,55 @@
             </strong>
         </div>
 
+        <!--slideshow section-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!--slide 1 of 5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images_videos/fbprofile.jpg" alt="pic of me">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!--slide 2 of 5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images_videos/HTML_CSS_and_JavaScript.jpeg" alt="html, css, js logo">
+                        <div class="text">I'm am trained in HTML, CSS, and Javascript,</div>
+                    </div>
+                    <!--slide 3 of 5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images_videos/SQL_and_Database.jpg" alt="sql logo">
+                        <div class="text">learning back end development, databases, and SQL,</div>
+                    </div>
+                    <!--slide 4 of 5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images_videos/uiuxl.png" alt="ui ux">
+                        <div class="text">UI and UX design, and more!</div>
+                    </div>
+                    <!--slide 5 of 5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images_videos/slidecontact.jpg" alt="phone and hand">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+                    <!--prev and nxt btn-->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <!--slideshow dots-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentslide(1)"></span>
+                    <span class="dot" onclick="currentslide(2)"></span>
+                    <span class="dot" onclick="currentslide(3)"></span>
+                    <span class="dot" onclick="currentslide(4)"></span>
+                    <span class="dot" onclick="currentslide(5)"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
@@ -63,7 +115,7 @@
                     <br>
                     <br>I am a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s UI and UX Design Boot Camp, training in multiple programming languages including: HTML, CSS, JavaScript, SQL, C# and more. 
                     <br>
-                    <br>I would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br>I would love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
                 </p>
             </div>
         </div>
@@ -86,23 +138,23 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="./images_videos/contact.png" alt="Contact image emails">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm"></div>
+             <!--This specifies where and how to send the form data; we are leaving it blank-->
+             <form action="https://formspree.io/f/xeqnnnav" method="POST" class="form-container"> 
                 <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="https://formspree.io/f/xeqnnnav" method="POST"> <!--insert formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
+                    <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="text" placeholder="Please enter your phone number here" name="phone">
+                    <label for="email"><b>Email:</b></label>
                         <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
+                    <label for="message"><b>Message:</b></label>
                         <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                        
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -114,5 +166,6 @@
                 <br>
             </p>
         </footer>
+        <script src="portfolio.js"></script>
     </body>
 </html>
