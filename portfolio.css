@@ -11,7 +11,7 @@ body {
     opacity: 1; /*pg loading fade in effect*/
     transition: 3s opacity; /*causes 3 sec fade in*/
     letter-spacing: .2vw; /*vw is a relative measurement. 1vw = 1% viewport width*/
-    font-family: Avant Garde, Helvetica;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.5vw;
     overflow-x: hidden; /*prevent hor scroll bar from appearing when quote is hovered over*/
     user-select:none; /*prevents the text on pg from being highlighted by the user*/
@@ -25,7 +25,8 @@ body.fade-out {
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #f3ee8e; 
@@ -46,7 +47,7 @@ h1:hover {
 
 /* Paragraph elements */
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: justify; /* Justify text within paragraph elements */
     letter-spacing: 1px; /* This expands the text slightly */
     font-size: 2.5vw; /*relative to 2.5% viewport width*/
