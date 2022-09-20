@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Nubia Brice</title>
+        <link rel="stylesheet" type="text/css" href="./portfolio.css">
+        <link rel="shortcut icon" type="img/jpg" href="images_videos/coding_icon.png">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">Experience</a>
+            <!--onclick and ondbclick func added to op/cls contact form-->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+
+        <!--Breaks-->
+        <br>
+        <br>
+
+
+
+        <!--UC About Project Section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>About this Project</h1>
+                <p>
+                    Utility Construction Company needed new branding and web presence after revamping their
+                    company logos and design. This project included changes and updates to:
+                    <br>
+                    <ui>
+                        <li>Mobile App</li>
+                        <li>Landing Pages</li>
+                        <li>Newsletters</li>
+                    </ui>
+                    
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="" target="_blank"><img src="case_study_images/Apps Board.jpg" alt=""></a>
+            </div>
+        </div>
+
+          <!--Socials Section-->
+          <div class="Row" id="Socials and Experience">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="case_study_images/News Letters.jpg" alt="wireframe">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                    <img src="case_study_images/Landing Pages.jpg" alt="wireframe"> 
+            </div>
+        </div>
+
+
+ <!--slideshow section-->
+ <div id="Slideshow">
+    <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+            <!--slide 1 of 5-->
+            
+            <!--slide 2 of 5-->
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="case_study_images/cs1.jpg" alt="">
+                <div class="text">Case Study</div>
+            </div>
+            <!--slide 3 of 5-->
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="case_study_images/cs2.jpg" alt="">
+                <div class="text">Case Study</div>
+            </div>
+            <!--slide 4 of 5-->
+            <div class="mySlides fade">
+                <img class="Slideshow_Images" src="case_study_images/cs3.jpg" alt="">
+                <div class="text">Case Study</div>
+            </div>
+            </div>
+           
+            <!--prev and nxt btn-->
+            <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!--slideshow dots-->
+        <div style="text-align: center">
+            <span class="dot" onclick="currentslide(1)"></span>
+            <span class="dot" onclick="currentslide(2)"></span>
+            <span class="dot" onclick="currentslide(3)"></span>
+            <span class="dot" onclick="currentslide(4)"></span>
+            <span class="dot" onclick="currentslide(5)"></span>
+        </div>
+    </div>
+</div>
+
+
+        <!--Contact section-->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+             <!--This specifies where and how to send the form data; we are leaving it blank-->
+             <form action="https://formspree.io/f/xeqnnnav" method="POST" class="form-container"> 
+                <h1>Contact</h1>
+                    <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="text" placeholder="Please enter your phone number here" name="phone">
+                    <label for="email"><b>Email:</b></label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label for="message"><b>Message:</b></label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Nubia Jade Brice, <a href="https://github.com/nubiajadebrice" target="_blank">Nubia Brice Github</a>, or visit <a href="https://nubiajadebrice.godaddysites.com/" target="_blank">Nubia Brice Writing</a></p>
+                <br>
+            </p>
+        </footer>
+        <script src="portfolio.js"></script>
+    </body>
+</html>
